@@ -1,26 +1,37 @@
-#MvcRazorToPdf
-Create pdf documents within an asp .net mvc project by generating your views as normal but returning a PdfActionResult.
+# MvcRazorToPdf
 
-*Demo link to follow
+Create PDF documents within an ASP .Net MVC project by generating your views as normal but returning a `PdfActionResult`.
 
-This converts regular produced razor/html to pdf documents in the browser using the iTextXmlWorker.
+This converts regular produced razor/html to PDF documents in the browser using the iTextXmlWorker.
 
 This uses the newer version/licence of iText/iTextXmlWorker and can process the html that is produced from your views.
 
-##Installation instructions:
+## Installation instructions:
 
-Run the following nuget command from your mvc project to install the [package] (http://nuget.org/packages/MvcRazorToPdf/):
+Run the following nuget command from your mvc project to install the [package][nuget]:
 
 `Install-Package MvcRazorToPdf`
 
-##How to use it
-1. Create a shared layout that is compatible with an iTextXmlWorker document [Simple example layout] (https://github.com/andyhutch77/MvcRazorToPdf/blob/master/MvcRazorToPdfExample/Views/Shared/_PdfLayout.cshtml)
-2. Create a controller action that return a PdfActionResult (model optional) [Simple example contoller] (https://github.com/andyhutch77/MvcRazorToPdf/blob/master/MvcRazorToPdfExample/Controllers/PdfController.cs)
-3. Create the view page to render as normal [Simple example view] (https://github.com/andyhutch77/MvcRazorToPdf/blob/master/MvcRazorToPdfExample/Views/Pdf/Index.cshtml)
+[nuget]: http://nuget.org/packages/MvcRazorToPdf/
 
-[Complete example project] (https://github.com/andyhutch77/MvcRazorToPdf/tree/master/MvcRazorToPdfExample)
+## How to use it
 
-##Useful info
+1. Create a shared layout that is compatible with an `iTextXmlWorker` document [Simple example layout][example1]
+2. Create a controller action that return a `PdfActionResult` (model optional) [Simple example contoller][example2]
+3. Create the view page to render as normal [Simple example view][example3]
 
-[iTextXmlWorker docs] (http://demo.itextsupport.com/xmlworker/itextdoc/flatsite.html).
-[http://demo.itextsupport.com/xmlworker/] (http://demo.itextsupport.com/xmlworker/) if you have problems getting certain styles to render.
+[Complete example project](https://github.com/andyhutch77/MvcRazorToPdf/tree/master/MvcRazorToPdfExample)
+
+[example1]: ./MvcRazorToPdfExample/Views/Shared/_PdfLayout.cshtml
+[example2]: ./MvcRazorToPdfExample/Controllers/PdfController.cs
+[example3]: ./MvcRazorToPdfExample/Views/Pdf/Index.cshtml
+
+## Dependencies
+
+	<dependency id="iTextSharp" version="5.5.5" />
+	<dependency id="itextsharp.xmlworker" version="5.5.5" />
+
+## Useful info
+
+ * [iTextXmlWorker docs](http://demo.itextsupport.com/xmlworker/itextdoc/flatsite.html).
+ * <http://demo.itextsupport.com/xmlworker/> if you have problems getting certain styles to render.
